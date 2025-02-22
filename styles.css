@@ -1,198 +1,433 @@
 body {
+
   font-family: "Arial", sans-serif;
+
   background: linear-gradient(135deg, #6a11cb, #2575fc);
+
   color: #fff;
+
   display: flex;
+
   flex-direction: column;
+
   justify-content: center;
+
   align-items: center;
+
   min-height: 100vh;
+
   margin: 0;
+
   padding: 20px;
+
   box-sizing: border-box;
+
 }
+
+
 
 .countdown {
+
   text-align: center;
+
   background: rgba(255, 255, 255, 0.1);
+
   padding: 40px;
+
   border-radius: 20px;
+
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+
   animation: fadeIn 2s ease-in-out;
+
   max-width: 800px;
+
   width: 100%;
+
   margin-bottom: 40px;
+
 }
+
+
 
 .countdown h1 {
+
   font-size: 2.5em;
+
   margin-bottom: 20px;
+
   color: #ffdd57;
+
 }
+
+
 
 .countdown p {
+
   font-size: 1.2em;
+
   margin-bottom: 30px;
+
 }
+
+
 
 .timer {
+
   display: flex;
+
   justify-content: center;
+
   gap: 15px;
+
   flex-direction: row-reverse;
+
 }
+
+
 
 .timer div {
+
   background: rgba(255, 255, 255, 0.2);
+
   padding: 20px;
+
   border-radius: 15px;
+
   font-size: 2em;
+
   font-weight: bold;
+
   min-width: 100px;
+
   animation: pulse 1.5s infinite;
+
 }
+
+
 
 .timer span {
+
   font-size: 0.5em;
+
   display: block;
+
   margin-top: 10px;
+
   color: #ddd;
+
 }
+
+
 
 .message {
+
   display: none;
+
   font-size: 2em;
+
   color: #ffdd57;
+
   margin-top: 20px;
+
 }
+
+
 
 /* أنماط قسم الأدعية */
+
 .duas {
+
   background: rgba(255, 255, 255, 0.1);
+
   padding: 30px;
+
   border-radius: 20px;
+
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+
   text-align: right;
+
   max-width: 800px;
+
   width: 100%;
+
   margin-bottom: 40px;
+
 }
+
+
 
 .duas h2 {
+
   font-size: 2em;
+
   color: #ffdd57;
+
   margin-bottom: 25px;
+
 }
+
+
 
 .duas ol {
+
   font-size: 1.1em;
+
   line-height: 1.8;
+
   padding-right: 20px;
+
   margin: 0;
+
 }
+
+
 
 .duas li {
+
   margin-bottom: 15px;
+
 }
+
+
 
 .duas p {
+
   font-size: 1em;
+
   margin-top: 25px;
+
   color: #ddd;
+
 }
+
+
 
 /* أنماط حقوق النشر */
+
 footer {
+
   text-align: center;
+
   font-size: 1em;
+
   color: #ddd;
+
   margin-top: 20px;
+
 }
+
+
 
 footer p {
+
   margin: 0;
+
 }
+
+
 
 /* الرسوم المتحركة */
+
 @keyframes fadeIn {
+
   from {
+
     opacity: 0;
+
   }
+
   to {
+
     opacity: 1;
+
   }
+
 }
+
+
 
 @keyframes pulse {
+
   0% {
+
     transform: scale(1);
+
   }
+
   50% {
+
     transform: scale(1.05);
+
   }
+
   100% {
+
     transform: scale(1);
+
   }
+
 }
 
-/* التصميم المتجاوب */
+
+
+/* التصميم المتجاوب مع الحفاظ على الهيكل */
+
 @media (max-width: 768px) {
-  .countdown h1 {
-    font-size: 2em;
+
+  .countdown {
+
+    padding: 30px;
+
   }
+
+
+
+  .countdown h1 {
+
+    font-size: 2em;
+
+  }
+
+
 
   .countdown p {
+
     font-size: 1em;
+
   }
+
+
 
   .timer div {
+
     font-size: 1.5em;
+
     min-width: 80px;
+
     padding: 15px;
+
   }
+
+
+
+  .duas {
+
+    padding: 20px;
+
+  }
+
+
 
   .duas h2 {
+
     font-size: 1.8em;
+
   }
+
+
 
   .duas ol {
+
     font-size: 1em;
+
   }
+
+
 
   .duas p {
+
     font-size: 0.9em;
+
   }
 
+
+
   footer {
+
     font-size: 0.9em;
+
   }
+
 }
+
+
 
 @media (max-width: 480px) {
-  .timer {
-    flex-direction: column;
-    gap: 10px;
+
+  .countdown {
+
+    padding: 20px;
+
   }
+
+
+
+  .countdown h1 {
+
+    font-size: 1.8em;
+
+  }
+
+
+
+  .countdown p {
+
+    font-size: 0.9em;
+
+  }
+
+
 
   .timer div {
+
     font-size: 1.2em;
-    min-width: 60px;
+
+    min-width: 70px;
+
     padding: 10px;
+
   }
+
+
+
+  .duas {
+
+    padding: 15px;
+
+  }
+
+
 
   .duas h2 {
+
     font-size: 1.5em;
+
   }
+
+
 
   .duas ol {
+
     font-size: 0.9em;
+
   }
+
+
 
   .duas p {
+
     font-size: 0.8em;
+
   }
 
+
+
   footer {
+
     font-size: 0.8em;
+
   }
-}
+
+  }
