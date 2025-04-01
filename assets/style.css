@@ -29,6 +29,77 @@ body {
     line-height: 1.6;
 }
 
+/* مقدمة التطبيق */
+.intro-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0f2846, #1a4b84);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+    animation: fadeOut 1.5s ease-in-out 3s forwards;
+}
+
+.intro-content {
+    text-align: center;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 0.5s forwards;
+}
+
+.intro-icon {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    color: #e67e22;
+    animation: pulse 2s infinite;
+}
+
+.intro-title {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 10px;
+    font-family: 'Amiri', serif;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.intro-subtitle {
+    font-size: 1.2rem;
+    color: #f1c40f;
+    opacity: 0;
+    animation: fadeIn 1s ease-in 1.5s forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; visibility: hidden; }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
 .container {
     max-width: 800px;
     margin: 0 auto 40px;
