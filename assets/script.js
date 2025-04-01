@@ -100,4 +100,17 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // تحديث حقوق الطبع والنشر
+    function updateCopyright() {
+        const copyrightElement = document.getElementById('copyright');
+        const currentYear = new Date().getFullYear();
+        copyrightElement.textContent = `© ${currentYear} جميع الحقوق محفوظة`;
+    }
+
+    // بدء التطبيق
+    document.addEventListener('DOMContentLoaded', () => {
+        initApp();
+        updateCopyright();
+    });
 });
